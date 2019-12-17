@@ -1,3 +1,7 @@
+"""
+Created from
+https://machinelearningmastery.com/encoder-decoder-attention-sequence-to-sequence-prediction-keras/
+"""
 import tensorflow as tf
 from keras import backend as K
 from keras import regularizers, constraints, initializers, activations
