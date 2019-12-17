@@ -3,10 +3,11 @@ Created from
 https://machinelearningmastery.com/encoder-decoder-attention-sequence-to-sequence-prediction-keras/
 """
 import tensorflow as tf
-from tensorflow.python.keras import backend as K
-from tensorflow.python.keras import regularizers, constraints, initializers, activations
-from tensorflow.python.keras.layers.recurrent import Recurrent#, _time_distributed_dense
-from tensorflow.python.keras.layers import InputSpec
+from tensorflow.keras import backend as K
+from tensorflow.keras import regularizers, constraints, initializers, activations
+from tensorflow.keras.layers import Recurrent#, _time_distributed_dense
+from tensorflow.keras.layers import InputSpec
+#ImportError: cannot import name 'Recurrent'
 
 tfPrint = lambda d, T: tf.Print(input_=T, data=[T, tf.shape(T)], message=d)
 
