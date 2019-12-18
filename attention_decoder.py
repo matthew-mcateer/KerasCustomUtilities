@@ -5,7 +5,7 @@ https://machinelearningmastery.com/encoder-decoder-attention-sequence-to-sequenc
 import tensorflow as tf
 from tensorflow.keras import backend as K
 from tensorflow.keras import regularizers, constraints, initializers, activations
-from tensorflow.keras.layers import RNN #, _time_distributed_dense
+from tensorflow.keras.layers import SimpleRNN #, _time_distributed_dense
 from tensorflow.keras.layers import InputSpec
 #ImportError: cannot import name 'Recurrent'
 
@@ -42,7 +42,7 @@ def _time_distributed_dense(x, w, b=None, dropout=None,
     x = K.reshape(x, (-1, timesteps, output_dim))
     return x
 
-class AttentionDecoder(RNN):
+class AttentionDecoder(SimpleRNN):
 
     def __init__(self, units, output_dim,
                  activation='tanh',
